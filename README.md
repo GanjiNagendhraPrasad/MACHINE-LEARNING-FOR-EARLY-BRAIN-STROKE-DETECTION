@@ -1,0 +1,2 @@
+# MACHINE-LEARNING-FOR-EARLY-BRAIN-STROKE-DETECTION
+A stroke is a medical condition in which poor blood flow to the brain results in cell death. It is now a day a leading cause of death all over the world. Several risk factors believe to be related to the cause of stroke has been found by inspecting the affected individuals.
