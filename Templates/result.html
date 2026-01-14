@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+<title>Prediction</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top" style="background-color:goldenrod;">
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');"> 
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear"> 
+      <div class="fl_left"> 
+      </div>
+      <div class="fl_right"> 
+      </div>
+    </div>
+  </div>
+ <div class="wrapper row1">
+   <header id="header" class="hoc clear"> 
+      <div id="logo" class="fl_left">
+        <h1><a href="#">DETECTION OF BRAIN STROKE DISEASE USING MACHINE LEARNING</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="{% url 'dec'  %}">PassiveAgrressiveClassifier</a></li>
+					  <li><a href="{% url 'randomf' %}">Decision tree</a></li>
+          <li><a href="{% url 'nvb'  %}">Test the input</a>
+						<li><a href="{% url 'mnb' %}">Supportvectorclassifier</a></li>
+						<li><a href="{% url 'graph'  %}">AdaBoostClassifier</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+<div id="pageintro" class="hoc clear"style="background-image: url('https://img.freepik.com/free-vector/brain-chemistry-concept-illustration_114360-10136.jpg?w=1060&t=st=1689006685~exp=1689007285~hmac=8edd235eb136dac55e72f9f7080a234d22934dcba737a727ba09054f3c415366');background-repeat: no-repeat; background-position: center;background-size:cover">  
+    <article class="center">
+      <footer><a class="btn" href="#">BRAIN STROKE DISEASE PREDICTION :<h5>{{predictedvalue}}</h5></a></footer><br>
+	  <footer><a class="btn" href="#">ACCURACY:<h5>{{accuracy}}</h5></a></footer>
+    </article>
+  </div>
+</div>
+<div class="wrapper row2">
+  <section class="hoc container clear"> 
+    <div class="center btmspace-80">
+    </div>
+  </section>
+</div>
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>

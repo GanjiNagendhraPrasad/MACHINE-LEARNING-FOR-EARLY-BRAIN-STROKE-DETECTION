@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+<title>Prediction</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<style>
+#pageintro{
+     background-image: url('{% static 'images/h2.jpg' %}');
+	 #background-repeat:no-repeat;
+     color: white;
+     height: 650px;
+     padding: 100px 0 0 0;   
+     }
+</style>
+<body id="top" style="background-color:goldenrod;">
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');"> 
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear"> 
+           <div class="fl_left"> 
+      </div>
+      <div class="fl_right"> 
+       </div>
+    </div>
+  </div>
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <div id="logo" class="fl_left">
+        <h1><a href="#">DETECTION OF BRAIN STROKE DISEASE USING MACHINE LEARNING</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="{% url 'dec'  %}">PassiveAggressive</a></li>
+					  <li><a href="{% url 'randomf' %}">Decision tree</a></li>
+          <li><a href="{% url 'nvb'  %}">Test the input</a>
+						<li><a href="{% url 'mnb' %}">Supportvectorclassifier</a></li>
+						<li><a href="{% url 'graph'  %}">AdaBoostClassifier</a></li>
+						<li><a href="{% url 'logout'  %}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+<div id="pageintro" class="hoc clear" style="background-image: url('https://img.freepik.com/free-vector/brain-disease-technology-template_53876-117501.jpg?w=1380&t=st=1689030421~exp=1689031021~hmac=52d70d0c5aafbcc5ee6df8172d5bb08f4e2c4953b0351b9dd71e8dccb30752cb');background-size: cover;background-repeat: no-repeat;"> 
+       <article class="center">
+      <footer><a class="btn" href="#"></h5></a></footer><br>
+	  <footer><a class="btn" href="#">ACCURACY:<h5>{{accuracy}}</h5></a></footer>
+    </article>
+    </div>
+  </div>
+<div class="wrapper row2">
+  <section class="hoc container clear"> 
+    <div class="center btmspace-80">
+    </div>
+  </section>
+</div>
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>

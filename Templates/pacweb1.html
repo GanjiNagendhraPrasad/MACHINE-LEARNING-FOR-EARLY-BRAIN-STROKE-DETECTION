@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Prediction</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top" style="background-color:goldenrod;">
+<div class="bgded overlay" style="background-image:url('shannu.jpg');"> 
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear"> 
+      <div class="fl_left"> 
+      </div>
+      <div class="fl_right"> 
+      </div>
+    </div>
+  </div>
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <div id="logo" class="fl_left">
+        <h1><a href="#">DETECTION OF BRAIN STROKE DISEASE USING MACHINE LEARNING</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="{% url 'dec'  %}">PassiveAgrressiveClassifier</a></li>
+					  <li><a href="{% url 'randomf' %}">Decisiontree</a></li>
+          <li><a href="{% url 'nvb'  %}">Test the input</a>
+						<li><a href="{% url 'mnb' %}">Supportvectorclassifier</a></li>
+						<li><a href="{% url 'graph'  %}">AdaBoostClassifier</a></li>        
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div id="pageintro" class="hoc clear" style="background-image: url('https://img.freepik.com/free-photo/professional-doctor-neuroscience-developing-treatment-neurological-diseases-examining-patient-evolutions-doctor-researcher-adjusting-eeg-headset-analyzing-brain-functions-health-status_482257-13087.jpg?w=1380&t=st=1689030212~exp=1689030812~hmac=5618fb964dd19052d2ebcc72be6057689bc6a6ff5d26b22125fa8bb10d1a5f32'); background-repeat: no-repeat; background-position: center;background-size: cover;">  
+    <article class="center"style="cursor: pointer; background: 100px;">
+      <footer><a class="btn" href="#">{% block content %}
+	  <div class="single-feature">
+								<div class="title">
+									<h4 style="color:green"></h4>
+								</div>
+								<div class="desc-wrap" style="height: 250px; margin-bottom: 10px;">
+									<form action="{% url 'pac'  %}" role="form" method="POST" style="width: 250px;">
+                    {% csrf_token %}
+                    <select name="headline1" style="color: red;width: 250px;">
+                      <option value="">Gender</option>
+                      <option value="0">Male</option>
+                      <option value="1">Female</option>
+                    </select>
+                    <input type="text" placeholder="Age" name="headline2" style="color: red;width: 250px;">
+                    <select name="headline3" style="color: red;width: 250px;">
+                      <option value="">Hypertension</option>
+                      <option value="0">Yes</option>
+                      <option value="1">No</option>
+                    </select>
+                    <select name="headline4" style="color: red;width: 250px;">
+                      <option value="">Brain_Disease</option>
+                      <option value="0">Yes</option>
+                      <option value="1">No</option>
+                    </select>                    
+                    <select name="headline5" style="color: red;width: 250px;">
+                      <option value="">Marital Status</option>
+                      <option value="0">Yes</option>
+                      <option value="1">No</option>
+                    </select>                 
+                     <select name="headline6" style="color: red;width: 250px;">
+                      <option value="">Work Type</option>
+                      <option value="0">Student</option>
+                      <option value="1">Self-Employed</option>
+                      <option value="2">Never Worked</option>
+                      <option value="3">Hard Worker</option>
+                    </select>
+                    <select name="headline7" style="color: red;width: 250px;">
+                      <option value="">Residence Type</option>
+                      <option value="0">Urban</option>
+                      <option value="1">Rural</option>
+                    </select>                    
+                    <input type="text" placeholder="Avg_glucose_level" name="headline8" style="color: red;width: 250px;">
+                    <input type="text" placeholder="Body_mass_index" name="headline9" style="color: red;width: 250px;">
+                    <select name="headline10" style="color: red;width: 250px;">
+                      <option value="">Smoking Status</option>
+                      <option value="0">Never Smoked</option>
+                      <option value="1">Partially Smoked</option>
+                      <option value="2">Smoked</option>
+                    </select>                    
+                    <button type="submit" class="save btn btn-default";>TEST</button>
+                  </form>
+								</div>
+							</div>
+	  {% endblock %}</h5></a></footer>
+    </article>
+  </div>
+</div>
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>
